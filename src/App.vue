@@ -1,24 +1,15 @@
 <script>
-import axios from 'axios';
 import HeaderYugioh from './components/HeaderYugioh.vue';
 import ArchetypeYugioh from './components/ArchetypeYugioh.vue';
+import CardList from './components/CardList.vue';
+import CardInfo from './components/CardInfo.vue';
 
 export default {
   components: {
     HeaderYugioh,
     ArchetypeYugioh,
-  },
-  data() {
-    return {
-      cards: [],
-      apiURL: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
-    };
-  },
-  created() {
-    axios.get(this.apiURL).then((response) => {
-      this.cards = response.data.data;
-      console.log(this.cards);
-    });
+    CardInfo,
+    CardList,
   },
 };
 </script>
@@ -26,6 +17,8 @@ export default {
 <template>
   <HeaderYugioh></HeaderYugioh>
   <ArchetypeYugioh></ArchetypeYugioh>
+  <CardInfo></CardInfo>
+  <CardList></CardList>
 </template>
 
 <style scoped></style>

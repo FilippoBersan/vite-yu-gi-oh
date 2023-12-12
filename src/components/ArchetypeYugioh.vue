@@ -15,7 +15,7 @@ export default {
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .container-select {
   padding-left: 50px;
   padding-top: 20px;
