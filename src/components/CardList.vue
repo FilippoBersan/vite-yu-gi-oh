@@ -14,6 +14,7 @@ export default {
   },
   created() {
     axios.get(this.apiURL).then((response) => {
+      console.log(response);
       this.cards = response.data.data.data;
     });
   },
