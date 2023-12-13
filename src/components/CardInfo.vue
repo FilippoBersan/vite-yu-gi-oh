@@ -10,8 +10,10 @@ export default {
     <div>
       <img :src="img" alt="name" />
 
-      <h3>{{ name }}</h3>
-      <strong>{{ archetype }}</strong>
+      <div class="text">
+        <h3>{{ name }}</h3>
+        <p>{{ archetype }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -19,8 +21,9 @@ export default {
 <style scoped lang="scss">
 .container-cards {
   display: flex;
+  text-align: center;
   flex-direction: column;
-  background-color: orange;
+  background-color: rgb(152, 109, 30);
   width: 200px;
   height: 400px;
 
