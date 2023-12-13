@@ -2,10 +2,12 @@
 import axios from 'axios';
 import { store } from '../store.js';
 import CardInfo from './CardInfo.vue';
+import ArchetypeYugioh from './ArchetypeYugioh.vue';
 export default {
   name: 'CardList',
   components: {
     CardInfo,
+    ArchetypeYugioh,
   },
   data() {
     return {
@@ -15,10 +17,6 @@ export default {
   created() {
     axios.get(store.apiURL).then((response) => {
       store.cards = response.data.data;
-    });
-
-    axios.get(store.apiURL).then((resp) => {
-      store.imgCards = resp.data.card_images;
     });
   },
 };

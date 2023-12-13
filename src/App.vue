@@ -3,6 +3,7 @@ import HeaderYugioh from './components/HeaderYugioh.vue';
 import ArchetypeYugioh from './components/ArchetypeYugioh.vue';
 import CardList from './components/CardList.vue';
 import CardInfo from './components/CardInfo.vue';
+import CardFound from './components/CardFound.vue';
 
 export default {
   components: {
@@ -10,6 +11,7 @@ export default {
     ArchetypeYugioh,
     CardInfo,
     CardList,
+    CardFound,
   },
 };
 </script>
@@ -17,7 +19,9 @@ export default {
 <template>
   <HeaderYugioh></HeaderYugioh>
   <ArchetypeYugioh></ArchetypeYugioh>
+
   <div class="container-card">
+    <CardFound />
     <CardList></CardList>
   </div>
 </template>
@@ -32,5 +36,6 @@ export default {
   background-color: aliceblue;
   margin-top: 20px;
   width: 80%;
+  padding: 30px;
 }
 </style>

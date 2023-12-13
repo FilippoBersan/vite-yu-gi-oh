@@ -1,8 +1,11 @@
 <script>
 export default {
   name: 'app select',
+
   data() {
-    return {};
+    return {
+      apiArchetype: 'https://db.ygoprodeck.com/api/v7/archetypes.php',
+    };
   },
 };
 </script>
@@ -10,7 +13,7 @@ export default {
 <template>
   <div class="container-select">
     <select id="type" name="type" form="Archetype">
-      <option value="Alien">Alien</option>
+      <option :value="apiArchetype">{{ apiArchetype }}</option>
     </select>
   </div>
 </template>
