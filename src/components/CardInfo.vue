@@ -1,29 +1,36 @@
 <script>
 export default {
   name: 'Card info',
+  props: ['img', 'name', 'archetype'],
 };
 </script>
 
 <template>
-  <div class="container-main">
-    <div class="container-cards">
-      <div>img</div>
-      <h3>{{}}</h3>
-      <p>tipo</p>
+  <div class="container-cards">
+    <div>
+      <img :src="img" alt="name" />
+
+      <h3>{{ name }}</h3>
+      <strong>{{ archetype }}</strong>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
-.container-main {
-  display: flex;
-  margin: 0 auto;
-  background-color: aliceblue;
-  margin-top: 20px;
-  width: 80%;
-}
 .container-cards {
   display: flex;
   flex-direction: column;
+  background-color: orange;
+  width: 200px;
+  height: 400px;
+
+  h3 {
+    color: azure;
+  }
+
+  img {
+    height: 280px;
+    width: 100%;
+  }
 }
 </style>

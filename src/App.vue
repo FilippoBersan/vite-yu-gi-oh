@@ -17,7 +17,20 @@ export default {
 <template>
   <HeaderYugioh></HeaderYugioh>
   <ArchetypeYugioh></ArchetypeYugioh>
-  <CardList></CardList>
+  <div class="container-card">
+    <CardList></CardList>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.container-card {
+  display: flex;
+  justify-content: space-around;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  background-color: aliceblue;
+  margin-top: 20px;
+  width: 80%;
+}
+</style>

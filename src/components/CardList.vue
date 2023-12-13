@@ -16,13 +16,21 @@ export default {
     axios.get(store.apiURL).then((response) => {
       store.cards = response.data.data;
     });
+
+    axios.get(store.apiURL).then((resp) => {
+      store.imgCards = resp.data.card_images;
+    });
   },
 };
 </script>
 
 <template>
-  <div class="container">
-    <CardInfo></CardInfo>
+  <div class="container" v-for="card in store.cards">
+    <CardInfo
+      :img="card.card_images[0].image_url"
+      :name="card.name"
+      :archetype="card.archetype"
+    />
   </div>
 </template>
 
