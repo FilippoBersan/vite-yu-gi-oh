@@ -8,7 +8,7 @@ export default {
   <div class="container-main">
     <div class="container-cards">
       <div>img</div>
-      <h3>nome carta</h3>
+      <h3>{{}}</h3>
       <p>tipo</p>
     </div>
   </div>

@@ -17,7 +17,6 @@ export default {
 <template>
   <HeaderYugioh></HeaderYugioh>
   <ArchetypeYugioh></ArchetypeYugioh>
-  <CardInfo></CardInfo>
   <CardList></CardList>
 </template>
 
